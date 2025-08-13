@@ -29,6 +29,33 @@ The data is provided in the following files:
 
 **Note**: Ensure these data files are in the same directory as the notebook or provide the correct file paths in the code.
 
+
+### Handling Large Data Files with Git LFS
+
+The `.npy` and `.txt` files in this project can be large, making them unsuitable for standard Git due to storage and performance limits.
+**Git Large File Storage (LFS)** handles this by replacing large files with lightweight pointers in your Git history, while storing the actual file content separately on a remote server.
+
+#### Setup and Usage
+
+```bash
+# Install Git LFS (only once per system)
+git lfs install
+
+# Navigate to your repository root (if not already there)
+cd /path/to/your/repo
+
+# Track large file types
+git lfs track "*.npy"
+git lfs track "*.txt"
+
+# Add and commit changes
+git add .
+git commit -m "Add data files with Git LFS"
+
+# Push to remote repository
+git push origin main   # Replace 'main' with your branch name if different
+
+
 ## Setup and Running the Code
 
 ### Prerequisites
