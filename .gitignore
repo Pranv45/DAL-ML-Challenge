@@ -1,0 +1,27 @@
+# Ignore virtual environments
+venv/
+.env/
+.venv/
+
+# Byte-compiled / cache files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Ignore logs
+*.log
+
+# Ignore environment/config files
+.env
+.env.*
+
+# Ignore data files that shouldn't be tracked
+*.sqlite3
+*.db
+
+# Ignore Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
